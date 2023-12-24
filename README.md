@@ -1,2 +1,3 @@
 The EEG signal classifier classifies data from EEG epochs from BNCI2014_001 dataset (BCI Competition IV winner) and can evaluate it with the functions WithinSessionEvaluation (Taking the training and test data from one session) or CrossSessionEvaluation (Taking all but one session as a training set and the remaining one as testing partition). 
+
 It utilizes Common Spatial Pattern (CSP) to enhance the signal-to-noise ratio of the electroencephalogram signals that come from the dataset. It also uses LinearDiscriminantAnalysis by scikit-learn in order to classify the data as well. By importing the seaborn library, we're able to graph these results as bar graphs. 
