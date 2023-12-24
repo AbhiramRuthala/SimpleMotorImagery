@@ -49,8 +49,8 @@ evaluation = WSE(
 
 results = evaluation.process({"csp+lda": pipeline})
 
-#Generate the graph to visualize the results of the session reading. This uses the seaborn package. Fig, ax and subplots are under matplotlib
-fig, ax = plt.subplots(figsize=(8, 7))
+#Generate the graph to visualize the results of the session reading. This uses the seaborn package. Fig, ax and subplots are under matplotlib. We create a string because sns can only use strings as labels. It can't use integers.
+fig, ax = plt.subplots(figsize=(10, 5))
 results["subj"] = results["subject"].apply(str)
 sns.barplot(x="score", y="subj", hue="session", data=results, orient="h", palette="viridis", ax=ax)
 plt.show()
